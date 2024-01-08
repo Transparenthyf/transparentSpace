@@ -30,8 +30,10 @@
 #footer {
   position: absolute;
   bottom: 0px;
-  padding: 5px;
+  padding: 5px 0;
+  width: 100%;
   height: 20px;
+  text-align: center;
   font-size: 10px;
   a {
     display: inline-block;

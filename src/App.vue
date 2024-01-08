@@ -3,16 +3,16 @@ import Footer from './components/Footer.vue'
 import { reactive } from 'vue'
 
 const view = reactive({
-  activeIndex: 1
+  activeIndex: '1'
 })
 </script>
 
 <template>
-  <el-menu :default-active="view.activeIndex" class="el-menu-demo" mode="horizontal">
+  <el-menu id="menu" :default-active="view.activeIndex" mode="horizontal">
     <el-menu-item index="1">Processing Center</el-menu-item>
-    <el-sub-menu index="2"> 2 </el-sub-menu>
-    <el-menu-item index="3">3</el-menu-item>
-    <el-menu-item index="4">4</el-menu-item>
+    <el-menu-item index="2">Processing Center</el-menu-item>
+    <el-menu-item index="3">Processing Center</el-menu-item>
+    <el-menu-item index="4">Processing Center</el-menu-item>
   </el-menu>
   <Footer></Footer>
 </template>
