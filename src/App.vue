@@ -5,7 +5,14 @@ import Header from './components/Header.vue'
 
 <template>
   <Header></Header>
+  <router-view></router-view>
   <Footer></Footer>
 </template>
 
-<style scoped></style>
+<style scoped>
+#menu {
+  .flex-grow {
+    flex-grow: 1;
+  }
+}
+</style>

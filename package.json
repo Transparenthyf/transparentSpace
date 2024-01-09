@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "element-plus": "^2.4.4",
-    "vue": "^3.2.47"
+    "vue": "^3.2.47",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
+    "@types/vue-router": "^2.0.0",
     "@vitejs/plugin-vue": "^4.1.0",
     "less": "^4.1.3",
     "less-loader": "^11.1.3",
