@@ -1,10 +1,8 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
-import { useRoute } from 'vue-router'
 
-const router = useRoute()
 const view = reactive({
-  activeIndex: router.path
+  activeIndex: window.location.pathname
 })
 </script>
 
