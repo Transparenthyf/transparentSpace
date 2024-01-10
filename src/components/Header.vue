@@ -17,9 +17,6 @@ const view = reactive({
     <el-menu-item index="/">个人简介</el-menu-item>
     <el-menu-item index="/instance">项目实例</el-menu-item>
     <el-menu-item index="/about">关于本站</el-menu-item>
-    <div>
-      <p>模式切换</p>
-    </div>
   </el-menu>
 </template>
 
