@@ -9,7 +9,8 @@ const view = reactive({
 <template>
   <el-menu id="menu" :router="true" :default-active="view.activeIndex" :ellipsis="false" mode="horizontal">
     <div id="logo">
-      <p>透明奇遇记</p>
+      <img src="../assets/image/logo.jpg" alt="logo" />
+      <span>透明奇遇记</span>
     </div>
     <div class="flex-grow"></div>
     <el-menu-item index="/">个人简介</el-menu-item>
@@ -21,6 +22,13 @@ const view = reactive({
 <style scoped less>
 #menu {
   padding: 0 10px;
+  #logo {
+    display: flex;
+    padding: 10px;
+    span {
+      line-height: 40px;
+    }
+  }
   .flex-grow {
     flex-grow: 1;
   }
