@@ -2,25 +2,47 @@
 import { reactive } from 'vue'
 
 const view = reactive({
-  colSpan: {
-    annotation: 7,
-    go: 7,
-    three: 7
-  }
+  cardList: [
+    {
+      name: 'annotation',
+      displayName: '标注平台',
+      span: 7
+    },
+    {
+      name: 'go',
+      displayName: '流程图',
+      span: 7
+    },
+    {
+      name: 'three',
+      displayName: '3D',
+      span: 7
+    }
+  ]
 })
+
+function magnifyCard(cardName: string) {
+  for (const card of view.cardList) {
+    if (card.name === cardName) {
+      card.span = 15
+    } else {
+      card.span = 3
+    }
+  }
+}
+
+function recover() {
+  for (const card of view.cardList) {
+    card.span = 7
+  }
+}
 </script>
 
 <template>
   <div class="container">
-    <el-row justify="space-around">
-      <el-col :span="view.colSpan.annotation">
-        <el-card shadow="hover"> 标注平台 </el-card>
-      </el-col>
-      <el-col :span="view.colSpan.go">
-        <el-card shadow="hover"> Go.js 流程图 </el-card>
-      </el-col>
-      <el-col :span="view.colSpan.three">
-        <el-card shadow="hover"> Three.js 3D </el-card>
+    <el-row justify="space-around" @mouseleave="recover">
+      <el-col v-for="card of view.cardList" :key="card.name" :span="card.span" @mouseenter="magnifyCard(card.name)">
+        <el-card shadow="hover"> {{ card.displayName }} </el-card>
       </el-col>
     </el-row>
   </div>
