@@ -13,9 +13,9 @@ const view = reactive({
       <span>透明奇遇记</span>
     </div>
     <div class="flex-grow"></div>
-    <el-menu-item index="/">个人简介</el-menu-item>
+    <el-menu-item index="/">个人简历</el-menu-item>
     <el-menu-item index="/instance">项目实例</el-menu-item>
-    <el-menu-item index="/about">关于本站</el-menu-item>
+    <!-- <el-menu-item index="/about">关于本站</el-menu-item> -->
   </el-menu>
 </template>
 
