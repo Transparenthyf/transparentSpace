@@ -7,26 +7,34 @@ const cardListWidth: number = 23
 const activeCardWidth: number = 13
 
 interface Card {
+  /** 卡片名 */
   name: string
+  /** 显示名称 */
   displayName: string
+  /** 卡片宽度 */
   span: number
+  /** 简介 */
+  resume: string
 }
 /** 卡片列表 */
 let cardList = reactive<Card[]>([
   {
     name: 'annotation',
     displayName: '标注台',
-    span: 0
+    span: 0,
+    resume: ''
   },
   {
     name: 'go',
     displayName: '流程图',
-    span: 0
+    span: 0,
+    resume: ''
   },
   {
     name: 'three',
     displayName: '3D',
-    span: 0
+    span: 0,
+    resume: ''
   }
 ])
 
