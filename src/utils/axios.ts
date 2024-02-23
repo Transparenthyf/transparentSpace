@@ -2,7 +2,7 @@ import axios from 'axios'
 
 let api = ''
 
-if (process.env !== undefined && process.env.NODE_ENV === 'development') {
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
   api = '/api'
 }
 

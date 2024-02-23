@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --mode development",
-    "build": "vue-tsc && vite build --mode release",
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,7 +17,6 @@
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
-    "@types/node": "^20.11.20",
     "@types/vue-router": "^2.0.0",
     "@vitejs/plugin-vue": "^4.1.0",
     "less": "^4.1.3",
