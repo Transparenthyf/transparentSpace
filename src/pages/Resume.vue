@@ -8,11 +8,14 @@ let resumeHTML = ''
 let resumeContainer: Element | null = null
 
 onMounted(() => {
+  // 向后端请求简历
   axios.get('/resume').then(async (res) => {
     if (res.status === 200) {
+      // 将简历转换成 HTML 格式
       resumeHTML = await marked(res.data)
     }
 
+    // 将简历挂载到界面上
     resumeContainer = document.getElementById('resumeContainer')
     if (resumeContainer !== null) {
       resumeContainer.innerHTML = resumeHTML
@@ -29,8 +32,9 @@ onMounted(() => {
 
 <style scoped less>
 #resumeContainer {
-  height: 100%;
-  overflow: auto;
-  padding: 0 50px;
+  width: 1000px;
+  height: calc(100% - 60px);
+  overflow: visible;
+  margin: auto;
 }
 </style>

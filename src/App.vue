@@ -9,10 +9,4 @@ import Header from './components/Header.vue'
   <Footer></Footer>
 </template>
 
-<style scoped>
-#menu {
-  .flex-grow {
-    flex-grow: 1;
-  }
-}
-</style>
+<style scoped></style>

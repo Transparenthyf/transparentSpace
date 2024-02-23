@@ -1,5 +1,11 @@
 import axios from 'axios'
 
-axios.defaults.baseURL = '/api'
+let api = ''
+
+if (process.env !== undefined && process.env.NODE_ENV === 'development') {
+  api = '/api'
+}
+
+axios.defaults.baseURL = api
 
 export default axios
